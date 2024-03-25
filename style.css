@@ -95,14 +95,73 @@ body {
 h1 {
    position: absolute;
    font-size: 5.5rem;
-   font-weight: 200;
-   font-style: italic;
-   line-height: 1.35;
-   bottom: 20px;
-   left: 35px;
+   line-height: 1.1;
+   bottom: 45px;
+   left: 70px;
    color: var(--color-primary-darker);
+   font-family: 'Cormorant Garamond', serif;
+   font-weight: 400;
+   font-style: normal;
 }
 
 .header__img {
    width: 100%;
+}
+
+/* SLIDER */
+.slider {
+   max-width: 100rem;
+   height: 50rem;
+   margin: 0 auto;
+   position: relative;
+
+   /* IN THE END */
+   overflow: hidden;
+}
+
+.slide {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 50rem;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   /* THIS creates the animation! */
+   transition: transform 1s;
+}
+
+.slide > img {
+   /* Only for images that have different size than slide */
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.slider__btn {
+   position: absolute;
+   top: 50%;
+   z-index: 10;
+
+   border: none;
+   background: rgba(255, 255, 255, 0.7);
+   font-family: inherit;
+   color: #333;
+   border-radius: 50%;
+   height: 5.5rem;
+   width: 5.5rem;
+   font-size: 3.25rem;
+   cursor: pointer;
+}
+
+.slider__btn--left {
+   left: 6%;
+   transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+   right: 6%;
+   transform: translate(50%, -50%);
 }
